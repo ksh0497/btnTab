@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textNum: UILabel!
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textNum.text = "0"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func btnC(_ sender: UIButton) {
+        count = count + 1
+        print(count)
+        textNum.text = String(count)
+        
+    }
+    
 }
 
