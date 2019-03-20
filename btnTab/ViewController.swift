@@ -20,10 +20,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnC(_ sender: UIButton) {
+        if (count < 10){
         count = count + 1
         print(count)
         textNum.text = String(count)
-        
+        } else {
+            count = count - 10
+            print(count)
+            textNum.text = String(count)
+        }
     }
     
 }
